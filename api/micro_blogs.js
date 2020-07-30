@@ -8,15 +8,11 @@ const Mblog = require('./models/mblog');
 
 // get all micro blogs
 router.get("/", (req, res) => {
-	/*
-	Mblog.ind(function (err, blogs) {
+	
+	Mblog.find({'author' : 'David David'}, 'author blog_text', function(err, someblogs) {
 		if (err) return console.error(err);
-		console.log(blogs);
-	
-	
-	
-  });*/
-	res.send('Hello');
+		console.log(someblogs);
+	});	
 });
 
 router.post("/", (req, res) => {
