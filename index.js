@@ -1,7 +1,9 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require('mongoose');
+var Promise = require('bluebird');
 
+const app = express();
 
 // example from openshift setup https://github.com/sclorg/nodejs-ex/blob/master/server.js
 
@@ -47,10 +49,9 @@ if (mongoURL == null) {
 }
 
 mongoose.connect(mongoURL);
+mongoose.Promise = Promise;
+var db = mongoose.connection;
 
-
-
-const app = express();
 
 
 
