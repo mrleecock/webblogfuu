@@ -8,9 +8,9 @@ const Mblog = require('./models/mblog');
 
 // get all micro blogs
 router.get("/", (req, res) => {
-  Mblog.find(function () {
+  Mblog.find(function (err, blogs) {
 		if (err) return console.error(err);
-		res.send('db action ok');	
+		console.log(blogs);	
   });
 });
 
