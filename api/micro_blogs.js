@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 		console.log(someblogs);
 		res.send(someblogs);
 	});	
-	res.send('All Done');
+	
 });
 
 router.post("/", (req, res) => {
