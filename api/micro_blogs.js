@@ -12,10 +12,11 @@ router.get("/", (req, res) => {
 	Mblog.ind(function (err, blogs) {
 		if (err) return console.error(err);
 		console.log(blogs);
-	*/
-	res.send('Hello');
 	
-  });
+	
+	
+  });*/
+	res.send('Hello');
 });
 
 router.post("/", (req, res) => {
