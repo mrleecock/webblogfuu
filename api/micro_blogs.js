@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
 		if (err) return console.error(err);
 		console.log(someblogs);
 	});	
+	res.send('All Done');
 });
 
 router.post("/", (req, res) => {
