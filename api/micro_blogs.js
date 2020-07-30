@@ -9,7 +9,7 @@ const Mblog = require('./models/mblog');
 // get all micro blogs
 router.get("/", (req, res) => {
 	
-	Mblog.find({'author' : 'David David'}, 'author blog_text', function(err, someblogs) {
+	Mblog.find(function(err, someblogs) {
 		if (err) return console.error(err);
 		console.log(someblogs);
 		res.send(someblogs);
