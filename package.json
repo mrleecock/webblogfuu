@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Server side API",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "scripts": {"start": "./node_modules/parcel-bundler/bin/cli.js index.html --port 8080","build": "parcel build index.html"},
   "dependencies": {
     "express": "4.17.1",
     "mongoose": "^5.3.14"
